@@ -1,6 +1,11 @@
 # Iteration 2 — Travel animation (move between floors)
 Iteration 2 evolves iteration 1 by simulating the lift *traveling* between floors.
 
+## What I learned
+- How to extend the same button+LED base into something more “real” without rewriting everything.
+- Basic **state machine thinking**: keep track of `current_floor`, a requested `target_floor`, and whether the lift is `moving`.
+- How to create a simple animation by doing a small action repeatedly (blink current floor LED, then step one floor).
+- That “travel” is just a loop with timing: do one step, wait a bit (`sleep`), then do the next step.
 
 ## What changed vs Iteration 1 (and why)
 Iteration 1 directly switches the active LED to the pressed button

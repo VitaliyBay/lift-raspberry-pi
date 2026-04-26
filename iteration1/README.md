@@ -5,6 +5,10 @@ Iteration 1 is the simplest “lift panel” behavior:
 - When you press a floor button, **only that floor LED is ON**.
 - The LED stays ON until you press another button.
 
+## What I learned
+- Read a button using a GPIO input with `Pin.PULL_DOWN` (stable default `0`, becomes `1` when pressed).
+- Drive an LED using a GPIO output (`Pin.OUT`) and switch it with `1` (on) / `0` (off)
+
 ## How it works (high level)
 - `floors` is a dictionary mapping floor number → `Floor(btn, led)`
 - The loop continuously scans all buttons:
